@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPF.Ctl", "LPF.Ctl\LPF.Ctl.csproj", "{0C2321E1-AFF9-4794-9E9E-1FDE34E37748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPF.Demo", "LPF.Demo\LPF.Demo.csproj", "{476A5F03-8EFB-49D8-A8AB-DF4E6E4EE356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C2321E1-AFF9-4794-9E9E-1FDE34E37748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C2321E1-AFF9-4794-9E9E-1FDE34E37748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C2321E1-AFF9-4794-9E9E-1FDE34E37748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C2321E1-AFF9-4794-9E9E-1FDE34E37748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{476A5F03-8EFB-49D8-A8AB-DF4E6E4EE356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{476A5F03-8EFB-49D8-A8AB-DF4E6E4EE356}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{476A5F03-8EFB-49D8-A8AB-DF4E6E4EE356}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{476A5F03-8EFB-49D8-A8AB-DF4E6E4EE356}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
