@@ -54,7 +54,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Helper\FullScreenManager.cs" />
     <Compile Include="WindowL.cs" />
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +88,9 @@
     </None>
     <AppDesigner Include="Properties\" />
     <Resource Include="Res\fontawesome-webfont.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
