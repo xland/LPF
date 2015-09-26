@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
+using System.Windows.Shapes;
+using System.Windows.Media;
 
 namespace LPF.Ctl
 {
@@ -33,15 +35,12 @@ namespace LPF.Ctl
             if(this.WindowState == WindowState.Maximized)
             {
                 WindowGrowBorder.Margin = new Thickness(0);
+                WindowButtonMaxPath.Data = Geometry.Parse("F1M0,10L0,3 3,3 3,0 10,0 10,2 4,2 4,3 7,3 7,6 6,6 6,5 1,5 1,10z M1,10L7,10 7,7 10,7 10,2 9,2 9,6 6,6 6,9 1,9z");
             }
             else
             {
                 WindowGrowBorder.Margin = new Thickness(10);
-                var old = (WindowL)e.OriginalSource;
-                if (old.WindowState == WindowState.Maximized)
-                {
-                    this.Top = 300;
-                }
+                WindowButtonMaxPath.Data = Geometry.Parse("F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z");
             }
         }
 
@@ -181,6 +180,7 @@ namespace LPF.Ctl
         Grid WindowContainer;
         ContentControl WindowTitleContent;
         Border WindowGrowBorder;
+        Path WindowButtonMaxPath;
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
@@ -188,6 +188,7 @@ namespace LPF.Ctl
             WindowContainer = GetTemplateChild("WindowContainer") as Grid;
             WindowGrowBorder = GetTemplateChild("WindowGrowBorder") as Border;
             var WindowCloseBtn = GetTemplateChild("WindowCloseBtn") as Button;
+            WindowButtonMaxPath = GetTemplateChild("WindowButtonMaxPath") as Path;
             WindowCloseBtn.Click += WindowCloseBtn_Click;
             var WindowMaxSizeBtn = GetTemplateChild("WindowMaxSizeBtn") as Button;
             WindowMaxSizeBtn.Click += WindowMaxSizeBtn_Click;

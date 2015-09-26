@@ -145,13 +145,13 @@
                                 Height="32"
                                 x:Name="WindowMaxSizeBtn"
                                 >
-                            <Path x:Name="PART_MaxPath"
+                            <Path x:Name="WindowButtonMaxPath"
                                   Width="10"
                                   Height="10"
                                   Data="F1M0,0L0,9 9,9 9,0 0,0 0,3 8,3 8,8 1,8 1,3z"
                                   SnapsToDevicePixels="True"
                                   Fill="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}" />
-                        </Button>
+                            </Button>
                         <Button Style="{DynamicResource WindowCloseButtonStyle}"
                                 Width="32"
                                 Height="32"
