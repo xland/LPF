@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:helper="clr-namespace:LPF.Ctl.Helper"
+                    xmlns:local="clr-namespace:LPF.Ctl">
+    <ControlTemplate x:Key="ButtonTemplateKey" TargetType="{x:Type local:ButtonL}">
+        <Border CornerRadius="2"  Background="{TemplateBinding Background}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="{TemplateBinding LeftIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6 0 0 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="2" Text="{TemplateBinding RightIcon}"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 0 6 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="1" Text="{TemplateBinding Content}"  Margin="6 0 6 0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+        </Border>
+    </ControlTemplate>
+    <Style x:Key="BaseButtonLStyle" TargetType="{x:Type local:ButtonL}">
+        <Setter Property="Template" Value="{StaticResource ButtonTemplateKey}"></Setter>
+        <Setter Property="Cursor" Value="Hand"></Setter>
+    </Style>
+    <Style x:Key="BlueButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+        <Setter Property="Background" Value="#2185d0"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+        <Setter Property="Margin" Value="4"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#0d71bb"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="#1A69A4"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="RedButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+        <Setter Property="Background" Value="#db2828"></Setter>
+        <Setter Property="Foreground" Value="#FFFFFF"></Setter>
+        <Setter Property="Margin" Value="4"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#d01919"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="#B21E1E"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="GrayButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+        <Setter Property="Background" Value="#e0e1e2"></Setter>
+        <Setter Property="Foreground" Value="#5A5A5A"></Setter>
+        <Setter Property="Margin" Value="4"></Setter>
+        <Setter Property="FontSize" Value="14"></Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{helper:ArgbBrush 202,203,205}"></Setter>
+                <Setter Property="Foreground" Value="{helper:ArgbBrush 41,41,41}"></Setter>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{helper:ArgbBrush 186,187,188}"></Setter>
+                <Setter Property="Foreground" Value="{helper:ArgbBrush 18,18,18}"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

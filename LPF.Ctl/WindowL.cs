@@ -15,6 +15,10 @@ namespace LPF.Ctl
 {
     public partial class WindowL : Window
     {
+        static WindowL()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowL), new FrameworkPropertyMetadata(typeof(WindowL)));
+        }
         public WindowL()
         {
 
@@ -48,11 +52,6 @@ namespace LPF.Ctl
         {
             var hs = PresentationSource.FromVisual(this) as HwndSource;
             hs.AddHook(new HwndSourceHook(WndProc));
-        }
-
-        static WindowL()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowL), new FrameworkPropertyMetadata(typeof(WindowL)));
         }
         public enum HitTest : int
         {
@@ -163,7 +162,7 @@ namespace LPF.Ctl
                             handled = true;
                             return new IntPtr((int)HitTest.HTBOTTOM);
                         }
-                        else if (cur_left < this.mousePoint.X && this.mousePoint.X < cur_left + WindowTitleContent.ActualWidth + 32 && this.mousePoint.Y > cur_top && this.mousePoint.Y < cur_top + 32)
+                        else if (cur_left < this.mousePoint.X && this.mousePoint.X < cur_left + WindowTitleContent.ActualWidth + 32 && this.mousePoint.Y > cur_top && this.mousePoint.Y < cur_top + 32+10)
                         {
                             handled = true;
                             return new IntPtr((int)HitTest.HTCAPTION);

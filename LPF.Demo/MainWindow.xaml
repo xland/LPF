@@ -5,9 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LPF.Demo"
         mc:Ignorable="d"
-        xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl"
-        Title="我的窗口" Height="450" Width="625" Icon="res/favicon.ico">
-    <Grid>
-        
-    </Grid>
+             Title="演示窗口"
+        xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl" Height="450" Width="625" Icon="res/favicon.ico">
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+            <Ctl:ButtonL Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+            <Ctl:ButtonL LeftIcon="&#xf012;" Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL  LeftIcon="&#xf073;" Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL  LeftIcon="&#xf09d;" Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+            <Ctl:ButtonL RightIcon="&#xf012;" Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL  RightIcon="&#xf073;" Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+            <Ctl:ButtonL  RightIcon="&#xf09d;" Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+        </StackPanel>
+    </StackPanel>
 </Ctl:WindowL>
