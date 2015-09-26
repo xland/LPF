@@ -187,7 +187,13 @@ namespace LPF.Ctl
             WindowTitleContent = GetTemplateChild("WindowTitleContent") as ContentControl;
             WindowContainer = GetTemplateChild("WindowContainer") as Grid;
             WindowGrowBorder = GetTemplateChild("WindowGrowBorder") as Border;
+            var WindowCloseBtn = GetTemplateChild("WindowCloseBtn") as Button;
+            WindowCloseBtn.Click += WindowCloseBtn_Click;
+            var WindowMaxSizeBtn = GetTemplateChild("WindowMaxSizeBtn") as Button;
+            WindowMaxSizeBtn.Click += WindowMaxSizeBtn_Click;
             WindowTitleContent.MouseMove += WindowTitleContent_MouseMove;
+            var WindowMinSizeBtn = GetTemplateChild("WindowMinSizeBtn") as Button;
+            WindowMinSizeBtn.Click += WindowMinSizeBtn_Click;
             //WindowTitleContent.MouseDoubleClick += WindowTitleContent_MouseDoubleClick;
             var WindowTitleIcon = GetTemplateChild("WindowTitleIcon") as ContentControl;
             WindowTitleIcon.MouseMove += WindowTitleContent_MouseMove;
@@ -195,6 +201,28 @@ namespace LPF.Ctl
             //WindowBorderTop.MouseLeftButtonDown += WindowBorderTop_MouseLeftButtonDown;
             //WindowBorderTop.MouseMove += WindowBorderTop_MouseMove;
             //WindowBorderTop.MouseLeftButtonUp += WindowBorderTop_MouseLeftButtonUp;
+        }
+
+        private void WindowMinSizeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void WindowMaxSizeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(WindowState == WindowState.Maximized)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+            else
+            {
+                WindowState = WindowState.Maximized;
+            }
+        }
+
+        private void WindowCloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
 
         //private void WindowTitleContent_MouseDoubleClick(object sender, MouseButtonEventArgs e)

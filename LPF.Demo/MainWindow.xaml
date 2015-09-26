@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:LPF.Demo"
         mc:Ignorable="d"
         xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl"
-        Title="MainWindow" Height="350" Width="525">
+        Title="我的窗口" Height="450" Width="625" Icon="res/favicon.ico">
     <Grid>
         
     </Grid>
