@@ -173,7 +173,6 @@
         <Setter Property="WindowStyle" Value="None"></Setter>
         <Setter Property="AllowsTransparency" Value="True"></Setter>
         <Setter Property="ShowInTaskbar" Value="True"></Setter>
-        <Setter Property="MinWidth" Value="160"></Setter>
-        <Setter Property="MinHeight" Value="80"></Setter>
+
     </Style>
 </ResourceDictionary>

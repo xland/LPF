@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LPF.Demo"
         mc:Ignorable="d"
-             Title="演示窗口"
-        xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl" Height="450" Width="625" Icon="res/favicon.ico">
+        Title="演示窗口"
+             MinHeight="200"
+             MinWidth="400"
+        xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl" Height="301" Width="625" Icon="res/favicon.ico">
     <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
             <Ctl:ButtonL Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>

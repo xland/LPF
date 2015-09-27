@@ -88,6 +88,7 @@ namespace LPF.Ctl
 
         private const int WM_GETMINMAXINFO = 0x0024;
         private const int WM_NCHITTEST = 0x0084;
+        private const int WM_POSCHANGING = 0x0046;
         private readonly int agWidth = 12; //拐角宽度  
         private readonly int bThickness = 10; // 边框宽度  
         private Point mousePoint = new Point(); //鼠标坐标
@@ -99,6 +100,11 @@ namespace LPF.Ctl
             switch (msg)
             {
                 case WM_GETMINMAXINFO:
+                    if(this.MinHeight >= this.Height||this.Width <=this.MinWidth)
+                    {
+                        handled = false;
+                        break;
+                    }
                     WmGetMinMaxInfo(hwnd, lParam);
                     handled = true;
                     break;
