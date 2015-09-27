@@ -29,7 +29,16 @@ namespace LPF.Ctl
             get { return (string)GetValue(RightIconProperty); }
             set { SetValue(RightIconProperty, value); }
         }
-       
+
+        public static readonly DependencyProperty TopIconProperty =
+    DependencyProperty.Register("TopIcon",
+        typeof(string),
+        typeof(ButtonL));
+        public string TopIcon
+        {
+            get { return (string)GetValue(TopIconProperty); }
+            set { SetValue(TopIconProperty, value); }
+        }
         static ButtonL()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ButtonL), new FrameworkPropertyMetadata(typeof(ButtonL)));

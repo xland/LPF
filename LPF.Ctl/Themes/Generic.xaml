@@ -3,6 +3,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/LPF.Ctl;component/Themes/ButtonL.xaml" />
+        <ResourceDictionary Source="/LPF.Ctl;component/Themes/ButtonTopIconL.xaml" />
         <ResourceDictionary Source="/LPF.Ctl;component/Themes/WindowL.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

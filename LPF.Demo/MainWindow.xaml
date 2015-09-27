@@ -23,5 +23,10 @@
             <Ctl:ButtonL  RightIcon="&#xf073;" Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
             <Ctl:ButtonL  RightIcon="&#xf09d;" Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
         </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+            <Ctl:ButtonL TopIcon="&#xf012;" Content="BlueButtonL" Style="{StaticResource BlueButtonTopIconL}"></Ctl:ButtonL>
+            <Ctl:ButtonL TopIcon="&#xf073;" Content="BlueButtonL" Style="{StaticResource RedButtonTopIconL}"></Ctl:ButtonL>
+            <Ctl:ButtonL TopIcon="&#xf09d;" Content="BlueButtonL" Style="{StaticResource GrayButtonTopIconL}"></Ctl:ButtonL>
+        </StackPanel>
     </StackPanel>
 </Ctl:WindowL>

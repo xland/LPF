@@ -2,25 +2,19 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:helper="clr-namespace:LPF.Ctl.Helper"
                     xmlns:local="clr-namespace:LPF.Ctl">
-    <ControlTemplate x:Key="ButtonTemplateKey" TargetType="{x:Type local:ButtonL}">
+    <ControlTemplate x:Key="ButtonTopIconTemplateKey" TargetType="{x:Type local:ButtonL}">
         <Border CornerRadius="2"  Background="{TemplateBinding Background}">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="{TemplateBinding LeftIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6 0 0 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
-                <TextBlock Grid.Column="2" Text="{TemplateBinding RightIcon}"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 0 6 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
-                <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  Margin="6 0 6 0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
-            </Grid>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="{TemplateBinding TopIcon}"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="6"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
+                <TextBlock Text="{TemplateBinding Content}"  Margin="6 0 6 6" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+            </StackPanel>                
         </Border>
     </ControlTemplate>
-    <Style x:Key="BaseButtonLStyle" TargetType="{x:Type local:ButtonL}">
-        <Setter Property="Template" Value="{StaticResource ButtonTemplateKey}"></Setter>
+    <Style x:Key="BaseButtonTopIconLStyle" TargetType="{x:Type local:ButtonL}">
+        <Setter Property="Template" Value="{StaticResource ButtonTopIconTemplateKey}"></Setter>
         <Setter Property="Cursor" Value="Hand"></Setter>
     </Style>
-    <Style x:Key="BlueButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+    <Style x:Key="BlueButtonTopIconL" BasedOn="{StaticResource BaseButtonTopIconLStyle}"  TargetType="{x:Type local:ButtonL}">
         <Setter Property="Background" Value="#2185d0"></Setter>
         <Setter Property="Foreground" Value="#FFFFFF"></Setter>
         <Setter Property="Margin" Value="4"></Setter>
@@ -34,7 +28,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    <Style x:Key="RedButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+    <Style x:Key="RedButtonTopIconL" BasedOn="{StaticResource BaseButtonTopIconLStyle}"  TargetType="{x:Type local:ButtonL}">
         <Setter Property="Background" Value="#db2828"></Setter>
         <Setter Property="Foreground" Value="#FFFFFF"></Setter>
         <Setter Property="Margin" Value="4"></Setter>
@@ -48,7 +42,7 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    <Style x:Key="GrayButtonL" BasedOn="{StaticResource BaseButtonLStyle}"  TargetType="{x:Type local:ButtonL}">
+    <Style x:Key="GrayButtonTopIconL" BasedOn="{StaticResource BaseButtonTopIconLStyle}"  TargetType="{x:Type local:ButtonL}">
         <Setter Property="Background" Value="#e0e1e2"></Setter>
         <Setter Property="Foreground" Value="#5A5A5A"></Setter>
         <Setter Property="Margin" Value="4"></Setter>

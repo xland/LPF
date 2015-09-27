@@ -17,13 +17,13 @@ namespace LPF.Ctl.Helper
             G = g;
             B = b;
         }
-        public ArgbBrush(byte r, byte g, byte b, byte a)
-        {
-            A = a;
-            R = r;
-            G = g;
-            B = b;
-        }
+        //public ArgbBrush(byte r, byte g, byte b, byte a)
+        //{
+        //    A = a;
+        //    R = r;
+        //    G = g;
+        //    B = b;
+        //}
         public byte A { get; set; }
         public byte R { get; set; }
         public byte G { get; set; }
