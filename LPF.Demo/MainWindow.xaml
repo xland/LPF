@@ -8,27 +8,38 @@
         Title="演示窗口"
              MinHeight="200"
              MinWidth="400"
+             WindowState="Maximized"
         xmlns:Ctl="clr-namespace:LPF.Ctl;assembly=LPF.Ctl" Height="301" Width="625" Icon="res/favicon.ico">
-    <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
-            <Ctl:ButtonL Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+            <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+                <Ctl:ButtonL  Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+                <Ctl:ButtonL LeftIcon="&#xf012;"  Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  LeftIcon="&#xf073;"   Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  LeftIcon="&#xf09d;"   Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+                <Ctl:ButtonL RightIcon="&#xf012;"  Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  RightIcon="&#xf073;" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
+                <Ctl:ButtonL  RightIcon="&#xf09d;" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
+                <Ctl:ButtonL TopIcon="&#xf012;" Content="BlueButtonL" Style="{StaticResource BlueButtonTopIconL}"></Ctl:ButtonL>
+                <Ctl:ButtonL TopIcon="&#xf073;" Content="BlueButtonL" Style="{StaticResource RedButtonTopIconL}"></Ctl:ButtonL>
+                <Ctl:ButtonL TopIcon="&#xf09d;" Content="BlueButtonL" Style="{StaticResource GrayButtonTopIconL}"></Ctl:ButtonL>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
-            <Ctl:ButtonL LeftIcon="&#xf012;" Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL  LeftIcon="&#xf073;" Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL  LeftIcon="&#xf09d;" Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
-            <Ctl:ButtonL RightIcon="&#xf012;" Height="36" Content="BlueButtonL" Style="{StaticResource BlueButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL  RightIcon="&#xf073;" Height="36" Content="RedButtonL" Style="{StaticResource RedButtonL}"></Ctl:ButtonL>
-            <Ctl:ButtonL  RightIcon="&#xf09d;" Height="36" Content="GrayButtonL" Style="{StaticResource GrayButtonL}"></Ctl:ButtonL>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="6 6 6 0">
-            <Ctl:ButtonL TopIcon="&#xf012;" Content="BlueButtonL" Style="{StaticResource BlueButtonTopIconL}"></Ctl:ButtonL>
-            <Ctl:ButtonL TopIcon="&#xf073;" Content="BlueButtonL" Style="{StaticResource RedButtonTopIconL}"></Ctl:ButtonL>
-            <Ctl:ButtonL TopIcon="&#xf09d;" Content="BlueButtonL" Style="{StaticResource GrayButtonTopIconL}"></Ctl:ButtonL>
-        </StackPanel>
-    </StackPanel>
+    </Grid>
 </Ctl:WindowL>

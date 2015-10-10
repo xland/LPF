@@ -10,9 +10,9 @@
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Text="{TemplateBinding LeftIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6 0 0 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
-                <TextBlock Grid.Column="2" Text="{TemplateBinding RightIcon}"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 0 6 0"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
-                <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  Margin="6 0 6 0" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Grid.Column="0" Text="{TemplateBinding LeftIcon}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="6 6 0 6"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
+                <TextBlock Grid.Column="2" Text="{TemplateBinding RightIcon}"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 6 6 6"  TextElement.FontFamily="/LPF.Ctl;Component/./res/#FontAwesome"></TextBlock>
+                <TextBlock Grid.Column="1" Text="{TemplateBinding Content}"  Margin="6 6 6 6" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
             </Grid>
         </Border>
     </ControlTemplate>
